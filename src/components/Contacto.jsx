@@ -1,20 +1,40 @@
 import React from "react";
 
-export default function Contacto() {
+const testimonios = [
+  {
+    nombre: "Carla Ríos",
+    comuna: "Viña del Mar",
+    mensaje: "Solicité instalación de aire en mi local. Llegaron puntuales y dejaron todo impecable.",
+    imagen: "/carla.jpg"
+  },
+  {
+    nombre: "Juan López",
+    comuna: "Quilpué",
+    mensaje: "Quedé muy conforme con el arreglo eléctrico. Se nota que tienen experiencia.",
+    imagen: "/juan.jpg"
+  },
+  {
+    nombre: "Patricia Mella",
+    comuna: "San Felipe",
+    mensaje: "Recomiendo InnovaQuinta, resolvieron un problema de gas que nadie más supo arreglar.",
+    imagen: "/patricia.jpg"
+  }
+];
+
+export default function Testimonios() {
   return (
-    <section className="py-16 px-6 bg-sky-50 text-center">
-      <h2 className="text-3xl font-poppins text-cyan-700 mb-6">Contáctanos</h2>
-      <div className="flex justify-center text-6xl mb-4">📩</div>
-      <form className="max-w-xl mx-auto space-y-4 text-left">
-        <input type="text" placeholder="Nombre" className="w-full p-3 border rounded-lg" />
-        <input type="email" placeholder="Correo" className="w-full p-3 border rounded-lg" />
-        <textarea placeholder="Mensaje" className="w-full p-3 border rounded-lg" rows="4"></textarea>
-        <button className="w-full bg-cyan-600 text-white px-6 py-3 rounded-full hover:bg-cyan-700 transition shadow">
-          Enviar mensaje
-        </button>
-      </form>
-      <p className="mt-6 text-gray-600">O contáctanos directamente:</p>
-      <a href="https://wa.me/56996519050" className="inline-block mt-2 bg-green-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-600 transition shadow-lg">WhatsApp</a>
+    <section className="py-12 px-6 bg-amber-50 text-center">
+      <h2 className="text-3xl font-poppins text-cyan-700 mb-6">Testimonios</h2>
+      <div className="grid gap-6 md:grid-cols-3 max-w-6xl mx-auto">
+        {testimonios.map((t, i) => (
+          <div key={i} className="bg-white p-6 rounded-xl shadow-md">
+            <img src={t.imagen} alt={t.nombre} className="w-16 h-16 mx-auto mb-4 rounded-full object-cover" />
+            <blockquote className="italic text-gray-600">“{t.mensaje}”</blockquote>
+            <p className="mt-2 font-semibold text-cyan-700">{t.nombre}</p>
+            <p className="text-sm text-gray-500">{t.comuna}</p>
+          </div>
+        ))}
+      </div>
     </section>
   );
 }

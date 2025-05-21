@@ -1,11 +1,40 @@
 import React from "react";
 
-export default function Header() {
+const testimonios = [
+  {
+    nombre: "Carla Ríos",
+    comuna: "Viña del Mar",
+    mensaje: "Solicité instalación de aire en mi local. Llegaron puntuales y dejaron todo impecable.",
+    imagen: "/carla.jpg"
+  },
+  {
+    nombre: "Juan López",
+    comuna: "Quilpué",
+    mensaje: "Quedé muy conforme con el arreglo eléctrico. Se nota que tienen experiencia.",
+    imagen: "/juan.jpg"
+  },
+  {
+    nombre: "Patricia Mella",
+    comuna: "San Felipe",
+    mensaje: "Recomiendo InnovaQuinta, resolvieron un problema de gas que nadie más supo arreglar.",
+    imagen: "/patricia.jpg"
+  }
+];
+
+export default function Testimonios() {
   return (
-    <header className="flex flex-col items-center justify-center py-12 bg-gradient-to-br from-cyan-700 via-cyan-600 to-sky-500 text-white shadow-lg">
-      <img src="/logo.png" alt="Logo" className="w-28 h-28 mb-4 rounded-full border-4 border-white shadow" />
-      <h1 className="text-4xl font-poppins font-bold">InnovaQuinta Spa</h1>
-      <p className="mt-2 text-lg font-inter">Soluciones técnicas de confianza para tu empresa o comercio</p>
-    </header>
+    <section className="py-12 px-6 bg-amber-50 text-center">
+      <h2 className="text-3xl font-poppins text-cyan-700 mb-6">Testimonios</h2>
+      <div className="grid gap-6 md:grid-cols-3 max-w-6xl mx-auto">
+        {testimonios.map((t, i) => (
+          <div key={i} className="bg-white p-6 rounded-xl shadow-md">
+            <img src={t.imagen} alt={t.nombre} className="w-16 h-16 mx-auto mb-4 rounded-full object-cover" />
+            <blockquote className="italic text-gray-600">“{t.mensaje}”</blockquote>
+            <p className="mt-2 font-semibold text-cyan-700">{t.nombre}</p>
+            <p className="text-sm text-gray-500">{t.comuna}</p>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }
