@@ -1,0 +1,1 @@
+import React from 'react'; import './index.css'; export default function App() { return (<div className='text-center p-10'><h1 className='text-3xl font-bold text-cyan-600'>InnovaQuinta Spa</h1><p className='mt-4'>Página profesional en construcción</p></div>); }
