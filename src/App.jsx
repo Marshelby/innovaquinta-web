@@ -1,4 +1,3 @@
-
 import React from "react";
 import "./index.css";
 
@@ -25,16 +24,16 @@ const testimonios = [
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-white text-gray-800 font-inter scroll-smooth">
+    <div className="min-h-screen text-gray-800 font-inter scroll-smooth bg-white">
       {/* Header */}
-      <header className="flex flex-col items-center justify-center py-12 bg-gradient-to-b from-cyan-700 to-cyan-500 text-white shadow-lg">
+      <header className="flex flex-col items-center justify-center py-12 bg-gradient-to-br from-cyan-700 via-cyan-600 to-sky-500 text-white shadow-lg">
         <img src="/logo.png" alt="Logo" className="w-28 h-28 mb-4 rounded-full border-4 border-white shadow" />
         <h1 className="text-4xl font-poppins font-bold">InnovaQuinta Spa</h1>
         <p className="mt-2 text-lg font-inter">Soluciones técnicas de confianza para tu empresa o comercio</p>
       </header>
 
       {/* Por qué elegirnos */}
-      <section className="py-12 px-4">
+      <section className="py-12 px-4 bg-slate-50">
         <h2 className="text-2xl text-center font-poppins font-semibold text-cyan-700 mb-6">¿Por qué elegirnos?</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto text-center">
           {[
@@ -43,7 +42,7 @@ export default function App() {
             ["⚡", "Respuesta rápida"],
             ["✅", "Garantía y postventa"]
           ].map(([icono, texto], i) => (
-            <div key={i} className="p-4 rounded-xl bg-gray-50 shadow hover:shadow-md transition text-center">
+            <div key={i} className="p-4 rounded-xl bg-white shadow hover:shadow-md transition text-center">
               <div className="text-3xl mb-2">{icono}</div>
               <p className="font-semibold text-cyan-600">{texto}</p>
             </div>
@@ -52,7 +51,7 @@ export default function App() {
       </section>
 
       {/* Servicios */}
-      <section className="py-16 px-6 bg-gray-50">
+      <section className="py-16 px-6 bg-cyan-50">
         <h2 className="text-3xl text-center font-poppins text-cyan-700 mb-10">Nuestros Servicios</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {[
@@ -71,11 +70,11 @@ export default function App() {
       </section>
 
       {/* Testimonios */}
-      <section className="py-12 px-6 bg-white text-center">
+      <section className="py-12 px-6 bg-amber-50 text-center">
         <h2 className="text-3xl font-poppins text-cyan-700 mb-6">Testimonios</h2>
         <div className="grid gap-6 md:grid-cols-3 max-w-6xl mx-auto">
           {testimonios.map((t, i) => (
-            <div key={i} className="bg-gray-50 p-6 rounded-xl shadow-md">
+            <div key={i} className="bg-white p-6 rounded-xl shadow-md">
               <img src={t.imagen} alt={t.nombre} className="w-16 h-16 mx-auto mb-4 rounded-full object-cover" />
               <blockquote className="italic text-gray-600">“{t.mensaje}”</blockquote>
               <p className="mt-2 font-semibold text-cyan-700">{t.nombre}</p>
@@ -86,7 +85,7 @@ export default function App() {
       </section>
 
       {/* Galería */}
-      <section className="py-12 px-6 bg-gray-50 text-center">
+      <section className="py-12 px-6 bg-white text-center">
         <h2 className="text-3xl font-poppins text-cyan-700 mb-6">Galería de Trabajos</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
           {[1, 2, 3, 4].map((n) => (
@@ -96,14 +95,14 @@ export default function App() {
       </section>
 
       {/* Cobertura */}
-      <section className="py-16 px-6 bg-white text-center">
+      <section className="py-16 px-6 bg-gray-100 text-center">
         <h2 className="text-3xl font-poppins text-cyan-700 mb-6">Cobertura</h2>
         <p className="mb-4 text-gray-600">Atendemos todas las comunas de la V Región: Valparaíso, Viña del Mar, Quilpué, Villa Alemana, Quillota, San Felipe, Los Andes, San Antonio, y más.</p>
         <iframe className="w-full max-w-4xl mx-auto h-64 rounded-xl border" src="https://www.google.com/maps/d/u/0/embed?mid=1rQom8G_r4LDlmkxKk0hVW_-lZuA-MNE&ehbc=2E312F" loading="lazy"></iframe>
       </section>
 
       {/* Contacto */}
-      <section className="py-16 px-6 bg-gray-50 text-center">
+      <section className="py-16 px-6 bg-sky-50 text-center">
         <h2 className="text-3xl font-poppins text-cyan-700 mb-6">Contáctanos</h2>
         <div className="flex justify-center text-6xl mb-4">📩</div>
         <form className="max-w-xl mx-auto space-y-4 text-left">
