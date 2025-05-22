@@ -23,7 +23,7 @@ const testimonios = [
 
 export default function Testimonios() {
   return (
-    <section className="py-12 px-6 bg-amber-50 text-center" data-aos="fade-up">
+    <section id="testimonios" className="min-h-screen snap-start py-12 px-6 bg-amber-50 text-center" data-aos="fade-up">
       <h2 className="text-3xl font-poppins text-cyan-700 mb-6">Testimonios</h2>
       <div className="grid gap-6 md:grid-cols-3 max-w-6xl mx-auto">
         {testimonios.map((t, i) => (
