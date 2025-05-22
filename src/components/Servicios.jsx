@@ -9,7 +9,7 @@ export default function Servicios() {
   ];
 
   return (
-    <section id="servicios" className="min-h-screen snap-start py-16 px-6 bg-cyan-50" data-aos="fade-up">
+    <section className="py-16 px-6 bg-cyan-50" data-aos="fade-up">
       <h2 className="text-3xl text-center font-poppins text-cyan-700 mb-10">Nuestros Servicios</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
         {servicios.map(([icon, title, desc], i) => (
