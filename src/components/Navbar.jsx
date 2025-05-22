@@ -13,7 +13,10 @@ export default function Navbar() {
           }
         });
       },
-      { threshold: 0.6 }
+      {
+        threshold: 0.65,
+        rootMargin: "-20% 0px -50% 0px", // Sección más centrada, evita errores por cercanía
+      }
     );
 
     sections.forEach((section) => observer.observe(section));
